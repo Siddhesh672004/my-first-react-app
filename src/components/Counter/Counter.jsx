@@ -1,4 +1,6 @@
+import styles from "./Counter.module.css";
 import { useState } from "react";
+import { Button } from "react-bootstrap";
 
 const Counter = ({ title = "Counter App", initCounter = 0 }) => {
   const [count, setCount] = useState(initCounter);
@@ -13,31 +15,31 @@ const Counter = ({ title = "Counter App", initCounter = 0 }) => {
     setCount((preState) => preState - 1);
   };
 
+  const titleStyle = { color: "red", backgroundColor: "#d1d1d1" };
+
   return (
-    <div>
-      <h2>{title}</h2>
+    <div className={styles.counter}>
+      <h2 style={titleStyle}>{title}</h2>
       <h3>{count}</h3>
 
       <div>
-        <button
-          onClick={incrementhandler}
-        >
+        <Button className="m-2" variant="success" onClick={incrementhandler}>
           Increment
-        </button>
+        </Button>
 
-        <button
-          onClick={decrementhandler}
-        >
+        <Button className="m-2" variant="warning" onClick={decrementhandler}>
           Decrement
-        </button>
+        </Button>
 
-        <button
+        {/* <button
           onClick={() => {
             setCount(initCounter);
           }}
-        >
+        > Reset</button>*/}
+
+        <Button className="m-2" variant="danger" onClick={() => {setCount(initCounter);}} >
           Reset
-        </button>
+        </Button>
       </div>
     </div>
   );

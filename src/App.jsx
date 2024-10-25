@@ -1,5 +1,7 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Counter from './components/Counter/Counter'
+import InputText from './components/InputText/InputText'
 
 function App() {
   
@@ -11,7 +13,7 @@ function App() {
         <Counter title="IceCreamApp" initCounter={7}/>
         <Counter title="Coco App" /> 
         <Counter initCounter={3}/>
-        <Counter/>
+        <InputText initText="Welcome"/>
       </div>
     </>
   )
