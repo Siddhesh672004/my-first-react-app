@@ -9,9 +9,9 @@ function App() {
       <div className="App">
         <h1>Home page</h1>
         <Counter title="IceCreamApp" initCounter={7}/>
-        <Counter title="Coco App" />
+        <Counter title="Coco App" /> 
         <Counter initCounter={3}/>
-
+        <Counter/>
       </div>
     </>
   )
